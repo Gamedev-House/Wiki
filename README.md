@@ -10,4 +10,5 @@
 - Каналы с VR тематикой: [ValemVR](https://www.youtube.com/c/ValemVR), [JustinPBarnett](https://www.youtube.com/c/JustinPBarnett), [VRwithAndrew](https://www.youtube.com/c/VRwithAndrew), [DilmerV](https://www.youtube.com/c/DilmerV)
 
 # Типовые ошибки
-- Отдавать некомпилирующийся код в ветке. В частности из-за того, что логический код (использующий `UnityEngine`) перемешан с кодом эдитора (использующим `UnityEditor`). Куски кода, которые используют эдитор (часто методы под аттрибутом `ContextMenu` или `OnValidate`) нужно оборачивать в `#if UNITY_EDITOR`, либо класть отдельно в папку `Editor` (см. https://docs.unity3d.com/Manual/SpecialFolders.html)
+- Отдавать некомпилирующийся код в ветке. В частности из-за того, что логический код (использующий `UnityEngine`) перемешан с кодом эдитора (использующим `UnityEditor`). Куски кода, которые используют эдитор (часто методы под аттрибутом `ContextMenu` или `OnValidate`) нужно оборачивать в `#if UNITY_EDITOR`, либо класть отдельно в папку `Editor` (см. https://docs.unity3d.com/Manual/SpecialFolders.html).
+- Коммитить изменения в общих сценах, если того не требует задача. Задача "написать логику руля" не подразумевает добавление огромного руля на главную игровую сцену.
